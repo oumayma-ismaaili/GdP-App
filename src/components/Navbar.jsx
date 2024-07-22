@@ -49,7 +49,7 @@ const Navbar = () => {
   };
 
   return (
-    <Popover as="header" className="bg-gray-900 pb-24">
+    <Popover as="header" className="bg-mesh-gradient pb-24">
       {({ open }) => (
         <>
           <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:container lg:px-8">

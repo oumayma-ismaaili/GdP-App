@@ -160,10 +160,10 @@ const ActionsPanel = () => {
 
                   <div className="mt-8">
                     <h3 className="text-lg font-medium">
-                      <a href={action.href} className="focus:outline-none">
+                      <span  className="focus:outline-none">
                         <span className="absolute inset-0" aria-hidden="true" />
                         {action.name}
-                      </a>
+                      </span>
                     </h3>
                     <p className="mt-2 text-sm text-gray-500">
                       {action.description}
