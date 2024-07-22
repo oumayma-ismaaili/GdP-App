@@ -58,7 +58,7 @@ const Navbar = () => {
               <div className="absolute left-0 flex-shrink-0 lg:static">
                 <a href="#">
                   <span className="sr-only">Your Company</span>
-                  <img className="h-8 w-auto" src={logo} alt="Your Company" />
+                  <img className="h-20 w-auto" src={logo} alt="Your Company" />
                 </a>
               </div>
 
