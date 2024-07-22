@@ -134,7 +134,7 @@ const ActionsPanel = () => {
               files && (
                 <a
                   target="_blank"
-                  href={actionIdx === 0 ? repo : files}
+                  href={action.name == "Code Repository"? repo : files}
                   key={action.name}
                   className={classNames(
                     actionIdx === 0
