@@ -32,34 +32,28 @@ export default function Modal() {
   }, [data.id, save]);
 
   const handleComplete = async () => {
-    setLoading(true)
+    setLoading(true);
     try {
       console.log("Updating task to 'in review' for task_id:", data.task_id);
       const { error: updateError } = await supabase
         .from("tasks")
         .update({ completed: "in review" })
         .eq("task_id", data.id);
-
-      setSave(!save);
-
       if (updateError) throw updateError;
 
       const userFullName = `${user.first_name} ${user.last_name}`;
       const { error: insertError } = await supabase
         .from("announcements")
         .insert({ object: userFullName, description });
-      setSave(!save);
-
       if (insertError) throw insertError;
 
       setData({ ...data, completed: "in review" });
       setOpen(false);
-      setLoading(false)
+      setLoading(false);
       setSave(!save);
     } catch (error) {
       console.error("Error handling task completion:", error);
-      setLoading(false)
-      setSave(!save);
+      setLoading(false);
     }
   };
 
@@ -159,7 +153,7 @@ export default function Modal() {
                         ></path>
                       </svg>
                     ) : (
-                      "Confirme"
+                      "Confirm"
                     )}
                   </button>
                   <button

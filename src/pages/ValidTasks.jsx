@@ -7,7 +7,7 @@ import { UserAuthContext } from "../App";
 
 export default function ValidTasks() {
   const [tasks, setTasks] = useState([]);
-  const { user } = useContext(UserAuthContext);
+  const { user, save } = useContext(UserAuthContext);
   const { setOpen, setData } = useContext(TaskContext);
 
   useEffect(() => {
@@ -28,7 +28,7 @@ export default function ValidTasks() {
     };
 
     fetchTasks();
-  }, [user]);
+  }, [user, save]);
 
   return (
     <div className="w-full bg-white px-6 py-12 shadow rounded-lg">
